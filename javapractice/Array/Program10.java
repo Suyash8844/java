@@ -1,8 +1,9 @@
+//addition of digit is even
 import java.util.*;
 class Program10{
 	public static void main(String[] args){
 		Scanner sc=new Scanner(System.in);
-		int sum=0,i,count=0;
+		int sum=0,i;
 		System.out.println("Enter Size of Array");
 		int size=sc.nextInt();
 		System.out.println("Enter Elements in Arrar");
@@ -11,14 +12,18 @@ class Program10{
 			arr[i]=sc.nextInt();
 		}
 		for(i=0;i<arr.length;i++){
-			if(arr[i]%2==0){
-				count++;
-			}
-			 sum=sum+arr[i]%10;
-                         arr[i]=arr[i]/10;
+			int temp=arr[i];
+			while(temp!=0){
+                         int rem=temp%10;
+			 sum=sum+rem;
+                         temp=temp/10;
 		}
-		 System.out.println("Addition of Digit="+sum);
+		if(sum%2==0){
+		 System.out.println("Output="+arr[i]);
 	}
+	sum=0;
 	
+}
+}
 }
 
