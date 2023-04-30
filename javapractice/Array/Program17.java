@@ -1,3 +1,4 @@
+//Strong no from an array
 import java.util.*;
 class Program17{
         public static void main(String[] args){
@@ -12,21 +13,19 @@ class Program17{
                 }
 		for(i=0;i<arr.length;i++){
 			int sum=0;
-			int temp=arr[i];
-			while(arr[i]!=0){
-		         int rem=arr[i]%10;
+			int no=arr[i];
+			while(no!=0){
+		         int rem=no%10;
 			 int f=1;
-			 for(i=1;i<=rem;i++){
-				 f=f*i;
-			 }
+			 for(int j=1;j<=rem;j++)
+				 f=f*j;
+			 
 			 sum=sum+f;
-			 arr[i]=arr[i]/10;
+			 no=no/10;
 			}
-			if(temp==sum){
-				System.out.println("Strong no="+temp);
-			}else{
-				System.out.println("Not Strong no=");
-			}
+			if(sum==arr[i]){
+				System.out.println("Strong no= "+arr[i]+" found at "+i);
+	            }
 		}
 	}
 }
