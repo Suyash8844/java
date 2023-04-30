@@ -1,3 +1,4 @@
+//pallindrome no from an array
 import java.util.*;
 class Program16{
         public static void main(String[] args){
