@@ -1,3 +1,4 @@
+//prime no
 import java.util.*;
 class Program14{
 	public static void main(String[] args){
@@ -6,24 +7,21 @@ class Program14{
 		int size=sc.nextInt();
 		System.out.println("Enter Elements");
 		int arr[]=new int[size];
-		int count=0;
 		for(int i=0;i<arr.length;i++){
 			arr[i]=sc.nextInt();
 		}
-		for(int i=1;i<arr.length;i++)
-		{       
-		     for(int j=0;j<=i;j++)	{
-			if(arr[i]%j==0){
-				count++;
-			}
+		for(int i=0;i<arr.length;i++){
+			if(arr[i]>=2){
+				int count=0;
+				for(int j=2;j*j<=arr[i];j++){
+					if(arr[i]%j==0)
+						count++;
+				}
+				if(count==0){
+					System.out.println("Prime no "+arr[i]+" found at "+i+" index");
+                  	}
 		}
-		if(count==2){
-			System.out.println("Prime");
-		}else{
-			System.out.println("Not Prime");
 		
-		}
-	}
-}
-	
-}
+        }
+   }
+}   
