@@ -1,3 +1,4 @@
+//Armstrong no from an array
 import java.util.*;
 class Program18{
         public static void main(String[] args){
@@ -10,16 +11,25 @@ class Program18{
                         arr[i]=sc.nextInt();
                 }
 		for(int i=0;i<arr.length;i++){
-			int sum=0;
-			int temp=arr[i];
-			while(arr[i]!=0){
-				int a=arr[i]%10;
-				sum=sum+a*a*a;
+			int sum=0,count=0;
+			int no=arr[i];
+			while(no!=0){
+			     count++;
+			     no=no/10;
 			}
-			if(temp==sum){
-				System.out.println("Armstrong no"+temp);
-			}else{
-				System.out.println("Not Armstrong"+temp);
+			no=arr[i];
+			while(no!=0){
+				int mul=1;
+				int rem=no%10;
+				for(int j=1;j<=count;j++){
+					mul=mul*rem;
+				}
+				sum=sum+mul;
+				no=no/10;
+			}
+			if(sum==arr[i]){
+				System.out.println("Armstrong no "+arr[i]+" found at "+i);
+		
 			}
 		}
 	}
