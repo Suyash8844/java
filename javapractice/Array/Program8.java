@@ -14,13 +14,30 @@ class Program8{
                 for(j=0;j<arr2.length;j++){
                         arr2[j]=sc.nextInt();
                 }
-                for(i=0;i<arr1.length;i++){
+                int flag=0;
+		System.out.println("Uncommon Elements Between Array");
+		for(i=0;i<arr1.length;i++){
+			for(j=0;j<arr2.length;j++){
+				if(arr1[i]==arr2[j]){
+					flag=1;
+				}
+			}
+			if(flag==0){
+				System.out.println(arr1[i]);
+			}
+			flag=0;
+		}
+		for(i=0;i<arr1.length;i++){
                         for(j=0;j<arr2.length;j++){
-                                if(arr1[i]!=arr2[j]){
-                                        System.out.println("UnCommon Elements are="+arr1[i]);
+                                if(arr2[i]==arr1[j]){
+                                        flag=1;
                                 }
-
                         }
-                }
-        }
+                        if(flag==0){
+                                System.out.println(arr2[i]);
+                        }
+                        flag=0;
+            
+		}
+	}	
 }
