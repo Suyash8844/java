@@ -1,3 +1,4 @@
+//count of digit in elements
 import java.util.*;
 class Program11{
 	public static void main(String[] args){
@@ -16,6 +17,7 @@ class Program11{
 				arr[i]=arr[i]/10;
 			}
 			System.out.println("Cound is="+count);
+			
 		}
 	}
 }
